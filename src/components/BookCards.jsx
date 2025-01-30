@@ -208,7 +208,7 @@ const BookCards = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-w72i.onrender.com/all-books');
+      const response = await fetch('https://mern-book-backend-new.onrender.com/all-books');
       const data = await response.json();
       setBooks(data.books);
     } catch (error) {

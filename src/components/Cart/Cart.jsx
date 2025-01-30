@@ -165,7 +165,7 @@ const Cart = () => {
 
   const fetchCartItems = async () => {
     try {
-      const response = await fetchWithAuth('https://mern-book-backend-w72i.onrender.com/api/cart');
+      const response = await fetchWithAuth('https://mern-book-backend-new.onrender.com/api/cart');
       const data = await response.json();
       setCartItems(data);
       setLoading(false);
@@ -176,7 +176,7 @@ const Cart = () => {
 
   const removeFromCart = async (bookId) => {
     try {
-      await fetchWithAuth(`https://mern-book-backend-w72i.onrender.com/api/cart/${bookId}`, {
+      await fetchWithAuth(`https://mern-book-backend-new.onrender.com/api/cart/${bookId}`, {
         method: 'DELETE'
       });
       fetchCartItems();
@@ -187,7 +187,7 @@ const Cart = () => {
 
   const handlePayment = async () => {
     try {
-      const response = await fetchWithAuth('https://mern-book-backend-w72i.onrender.com/api/create-order', {
+      const response = await fetchWithAuth('https://mern-book-backend-new.onrender.com/api/create-order', {
         method: 'POST',
         body: JSON.stringify({
           amount: calculateTotal() * 100, // Convert to paise
@@ -205,7 +205,7 @@ const Cart = () => {
         order_id: data.id,
         handler: async (response) => {
           try {
-            const verifyResponse = await fetchWithAuth('https://mern-book-backend-w72i.onrender.com/api/verify-payment', {
+            const verifyResponse = await fetchWithAuth('https://mern-book-backend-new.onrender.com/api/verify-payment', {
               method: 'POST',
               body: JSON.stringify({
                 razorpay_order_id: response.razorpay_order_id,

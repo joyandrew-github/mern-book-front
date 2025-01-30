@@ -42,7 +42,7 @@ const OTPVerification = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/auth/verify-otp', {
+      const response = await fetch('https://mern-book-backend-new.onrender.com/api/auth/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const OTPVerification = () => {
 
   const handleResendOTP = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/auth/resend-otp', {
+      const response = await fetch('https://mern-book-backend-new.onrender.com/api/auth/resend-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

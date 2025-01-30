@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const verifyAdmin = async () => {
       try {
-        const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/auth/check-admin', {
+        const response = await fetch('https://mern-book-backend-new.onrender.com/api/auth/check-admin', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetchWithAuth('https://mern-book-backend-w72i.onrender.com/all-books');
+      const response = await fetchWithAuth('https://mern-book-backend-new.onrender.com/all-books');
       const data = await response.json();
       setBooks(data.books);
       setLoading(false);
@@ -60,7 +60,7 @@ const Dashboard = () => {
   const handleDelete = async (bookId) => {
     if (window.confirm('Are you sure you want to delete this book?')) {
       try {
-        await fetchWithAuth(`https://mern-book-backend-w72i.onrender.com/delete-book/${bookId}`, {
+        await fetchWithAuth(`https://mern-book-backend-new.onrender.com/delete-book/${bookId}`, {
           method: 'DELETE'
         });
         fetchBooks(); // Refresh the book list
