@@ -1,0 +1,21 @@
+.book-slider {
+  padding-bottom: 50px !important;
+}
+
+.book-slider .swiper-button-next,
+.book-slider .swiper-button-prev {
+  color: #2563EB;
+}
+
+.book-slider .swiper-pagination-bullet {
+  background: #2563EB;
+  opacity: 0.5;
+}
+
+.book-slider .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.book-slider .swiper-slide {
+  height: auto !important;
+} 

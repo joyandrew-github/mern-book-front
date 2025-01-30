@@ -1,0 +1,32 @@
+/* Add this new CSS file */
+.mySwiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(79, 70, 229, 0.2) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4f46e5 !important;
+  transform: scale(1.2);
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+/* Optional: Add a gradient overlay to images */
+.book-image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+  pointer-events: none;
+} 
