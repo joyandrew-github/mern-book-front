@@ -27,7 +27,7 @@ const Shop = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-new.onrender.com/all-books');
+      const response = await fetch('https://mern-book-backend-w72i.onrender.com/all-books');
       const data = await response.json();
       setBooks(data.books);
       setFilteredBooks(data.books);
@@ -41,7 +41,7 @@ const Shop = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-new.onrender.com/api/categories');
+      const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/categories');
       const data = await response.json();
       setCategories(data.categories);
     } catch (error) {

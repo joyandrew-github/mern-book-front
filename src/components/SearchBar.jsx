@@ -12,7 +12,7 @@ const SearchBar = () => {
 
     setIsSearching(true);
     try {
-      const response = await fetch(`https://mern-book-backend-new.onrender.com/search-books?query=${searchTerm}`);
+      const response = await fetch(`https://mern-book-backend-w72i.onrender.com/search-books?query=${searchTerm}`);
       const data = await response.json();
       setSearchResults(data);
     } catch (error) {

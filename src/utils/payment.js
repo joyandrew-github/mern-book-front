@@ -20,7 +20,7 @@ export const makePayment = async (bookData) => {
     }
 
     // Create order
-    const orderResponse = await fetch('https://mern-book-backend-new.onrender.com/create-order', {
+    const orderResponse = await fetch('https://mern-book-backend-w72i.onrender.com/create-order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const makePayment = async (bookData) => {
         order_id: orderData.order.id,
         handler: function(response) {
           // Verify payment
-          fetch('https://mern-book-backend-new.onrender.com/verify-payment', {
+          fetch('https://mern-book-backend-w72i.onrender.com/verify-payment', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -208,7 +208,7 @@ const BookCards = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-new.onrender.com/all-books');
+      const response = await fetch('https://mern-book-backend-w72i.onrender.com/all-books');
       const data = await response.json();
       setBooks(data.books);
     } catch (error) {
@@ -260,7 +260,7 @@ const BookCards = () => {
   const formatPrice = (price) => {
     if (!price) return '0.00';
     const priceInINR = Math.round(parseFloat(price) * 75);
-    return `₹${priceInINR.toFixed(2)}`;
+    return `${priceInINR.toFixed(2)}`;
   };
 
   return (

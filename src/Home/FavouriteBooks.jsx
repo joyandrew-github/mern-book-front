@@ -5,7 +5,7 @@ const FavouriteBooks = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://mern-book-backend-new.onrender.com/all-books")
+    fetch("https://mern-book-backend-w72i.onrender.com/all-books")
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.error("Error fetching books:", err));

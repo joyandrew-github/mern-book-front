@@ -14,7 +14,7 @@ const FavoriteBooks = () => {
 
   const fetchFavoriteBooks = async () => {
     try {
-      const response = await fetch('https://mern-book-backend-new.onrender.com/api/favorite-books', {
+      const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/favorite-books', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

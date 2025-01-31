@@ -87,7 +87,7 @@ const Signup = () => {
     try {
       const { confirmPassword, ...registrationData } = formData;
 
-      const response = await fetch('https://mern-book-backend-new.onrender.com/api/auth/register', {
+      const response = await fetch('https://mern-book-backend-w72i.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
